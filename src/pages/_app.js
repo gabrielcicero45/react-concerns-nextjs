@@ -1,6 +1,4 @@
 import { Header } from "@/ui/components/Header";
-import { ReservationsProvider } from "../application/providers/ReservationsProvider";
-import { InventoryProvider } from "../application/providers/InventoryProvider";
 import Head from "next/head";
 import '@/styles/globals.scss'
 
@@ -20,12 +18,6 @@ export function App({ Component, pageProps }) {
   );
 }
 
-const AppWithProviders = (props) => (
-    <ReservationsProvider>
-      <InventoryProvider>
-        <App {...props} />
-      </InventoryProvider>
-    </ReservationsProvider>
-);
 
-export default AppWithProviders;
+
+export default App;

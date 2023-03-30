@@ -1,12 +1,10 @@
-import { useReservations } from "../../application/hooks/useReservations";
-import { useEffect, useState } from "react";
 import { Calendar } from "../components/Calendar";
 import cx from "./Students.module.scss";
 import { filterReservationsByStudent } from "../../domain/filterReservationsByStudent";
 import { useRouter } from "next/router";
 
 export const Students = ({ id, students, reservations }) => {
-  const router = useRouter()
+  const router = useRouter();
   const selectedStudent = students.find((courseTaker) => courseTaker.id === id);
   const selectedStudentReservations = filterReservationsByStudent(
     reservations,

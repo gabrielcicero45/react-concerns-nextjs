@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-import { useReservations } from "@/application/hooks/useReservations";
 import { Calendar } from "../components/Calendar";
 import cx from "./Rooms.module.scss";
 import { filterReservationsByRoom } from "@/domain/filterReservationsByRoom";
 import { useRouter } from "next/router";
 
-export const Rooms = ({id ,reservations, rooms}) => {
-  const router = useRouter()
+export const Rooms = ({ id, reservations, rooms }) => {
+  const router = useRouter();
 
   const selectedRoom = rooms.find((room) => room.id === id);
   const selectedRoomReservations = filterReservationsByRoom(
