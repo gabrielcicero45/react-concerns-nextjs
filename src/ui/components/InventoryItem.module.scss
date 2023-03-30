@@ -1,0 +1,27 @@
+.inventoryCard {
+  margin: 8px;
+  padding: 16px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+
+.low {
+  background-color: var(--low);
+}
+
+.moderate {
+  background-color: var(--moderate);
+}
+
+.high {
+  background-color: var(--high);
+}
+
+.veryHigh {
+  background-color: var(--very-high);
+}
+
+.none {
+  background-color: var(--none);
+}
